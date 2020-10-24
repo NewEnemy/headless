@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "art_posts",
+  "info": {
+    "name": "Art-Posts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "PostBody": {
+      "type": "richtext"
+    },
+    "PostImage": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "PostDate": {
+      "type": "date"
+    }
+  }
+}
